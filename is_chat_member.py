@@ -21,7 +21,7 @@ def pressed_button(message):
     if message.text == 'Check my memberships':
         chat_id = -1001979969925
         member_id = message.from_user.id
-        member_checking = bot.get_chat_member(chat_id, member_id)
+        member_checking = bot.get_chat_member(chat_id, member_id)  # Checking memberships
         if member_checking.status == 'member':
             bot.send_message(message.chat.id, 'You are member')
         else:
